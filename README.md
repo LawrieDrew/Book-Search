@@ -5,7 +5,6 @@
 * [Usage](#Usage)
 * [Deployed App](#Deployed)
 * [Contribution](#Contribution)
-* [Tests](#Tests)
 * [License](#License)
 * [Github](#Github)
 * [Email](#Email)
@@ -24,9 +23,6 @@ This is a MERN stack application incorporating the Google Books API to allow use
  
 # Contribution:
 My project is in a public repository on Github which is an open source platform. You may even be on it now. This project can be forked and all contribution is welcome!
-
-# Tests:
-The initial successful test run of this generator is saved in the project repository in a file entitled ReadMe Demos.
 
 # License:
 
