@@ -19,7 +19,7 @@ This is a MERN stack application incorporating the Google Books API to allow use
 # Usage:
 
 # Deployed:
- https://lawriedrew.github.io/Book-Search/
+ https://unholybooks.herokuapp.com/
  
 # Contribution:
 My project is in a public repository on Github which is an open source platform. You may even be on it now. This project can be forked and all contribution is welcome!
