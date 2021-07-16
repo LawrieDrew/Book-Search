@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "../../components/Form";
-import Results from "../../components/Results";
+import Results from "../../components/results";
 import API from "../../utils/API";
 class Search extends React.Component {
     state = {
@@ -24,8 +24,11 @@ class Search extends React.Component {
     }
 
     searchBook = query => {
-        API.getBook(query)
-            .then(res => this.setState({ books: res.data.items.map(bookData => this.makeBook(bookData)) }))
+        API.getBooks(query)
+            .then(res => {
+                console.log( res)
+                this.setState({ books: res.data.map(bookData => this.makeBook(bookData)) })
+            })
             .catch(err => console.error(err));
     };
 

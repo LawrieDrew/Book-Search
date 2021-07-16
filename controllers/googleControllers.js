@@ -4,7 +4,9 @@ const db = require("../models");
 module.exports = {
     findAll: function (req, res) {
         const { query: params } = req;
-        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${params.q}&maxResults=20`)
+        axios.get(`https://www.googleapis.com/books/v1/volumes`, {
+            params
+        })
             .then(results =>
                 results.data.items.filter(
                     result =>
@@ -13,6 +15,7 @@ module.exports = {
                         result.volumeInfo.infoLink &&
                         result.volumeInfo.authors &&
                         result.volumeInfo.description &&
+                        result.volumeInfo.imageLinks &&
                         result.volumeInfo.imageLinks.thumbnail
                 )
             )
@@ -20,7 +23,7 @@ module.exports = {
                 db.Book.find().then(dbBooks => 
                     apiBooks.filter(apiBook => 
                         dbBooks.every(dbBook => 
-                            dbBook.googleId !== apiBook.id
+                            dbBook.googleId.toString() !== apiBook.id
                         )
                     )
                 )

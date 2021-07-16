@@ -9,10 +9,9 @@ function App() {
   return (
     <Router>
       <div>
-        
           <Route exact path="/" component={GoogleBookSearch} />
           <Route exact path="/saved" component={Saved} />
-        
+
       </div>
     </Router>
   );

@@ -3,7 +3,7 @@ import axios from "axios";
 const apis = {
     getBooks: function (q) {
         return axios.get("/api/google", {
-            params: { q: q }
+            params: { q: "title:" + q }
         });
     },
     saveBook: function(bookData) {
